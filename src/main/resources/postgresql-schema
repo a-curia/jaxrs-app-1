@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS "product" (
+  "prd_id" SERIAL PRIMARY KEY,
+  "prd_name" varchar(30) DEFAULT NULL,
+  "prd_group" varchar(30) DEFAULT NULL,
+  "prd_price" integer DEFAULT -1,
+  "prd_on_date" TIMESTAMP default CURRENT_TIMESTAMP
+);
+
+
+insert into product(prd_name,prd_group, prd_price)
+values ('a2','prd_group_1',67.00);
+insert into product(prd_name,prd_group, prd_price)
+values ('a3','prd_group_1',77.00);
+insert into product(prd_name,prd_group, prd_price)
+values ('a4','prd_group_3',67.00);
+
+select * from product;
